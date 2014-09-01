@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Pusher test</title>
+	<script src= "http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src= "http://js.pusher.com/2.2/pusher.min.js" type="text/javascript"></script>
+	<link type="text/css" rel="stylesheet" href="/static/css/deco.css"/>
+	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.2.1/bootstrap-social.css">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/bootstrap-social.css')}}">
+	<script type="text/javascript" src="/static/js/ajax.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	
+
+	<script type="text/javascript">
+// 	$(function() {
+// 		var pusher = new Pusher('62d7b66cdbddfe53f2fa');
+// 		var channel = pusher.subscribe('test_channel');
+// 		channel.bind('my_event', function(data) {
+// 			$("#chat-room").append("<div>" +
+// 				"<span style='color:white'>" + data.name + "</span>" + " : " + data.msg + "    -     " + "<span style='color:white'>" + data.time + "</span>"
+// 				+ "</div>");
+
+// 		});
+
+
+
+// 		$("#send").click(function(){
+
+// 			var dNow = new Date();
+// 			var localdate= (dNow.getMonth()+1) + '/' + dNow.getDate() + '/' + dNow.getFullYear() + ' ' + dNow.getHours() + ':' + dNow.getMinutes();
+// 			$.get('/send',{
+// 				name_data: $("#chat_name").val(),
+// 				msg_data: $("#chat_msg").val(),
+// 				current_now: localdate
+
+// 			},
+// 			function(data) {
+
+// 			});
+// 		});
+
+// 		$('#input').keydown(function(e) {
+// 			if (e.keyCode == 13) {
+// 				$('#send').submit();
+// 			}
+// 		});
+
+
+// 		// $("#chat_msg").focus(function() {
+// 		// 	$(this).val('');
+// 		// }).blur(function() {
+// 		// 	if($(this).val() == "" { $(this).val("");}
+// 		// });
+// 		// });
+
+// });
+
+// 	
+</script>
+
+
+</head>
+<body>
+	<!-- <div class = "container">
+		<div class = "row">
+			<div class = "col-md-6 col-md-offset-2" id="login">
+				<h1>로그인해야 말할 수 있어요</h1>
+				<input type="text" name="login_id" placeholder="아이디">
+				<input type="button" id="login_btn" value="로그인">
+			</div>
+		</div>
+	</div>
+
+ -->
+
+
+
+	<div class="container" id="chatting">
+		<div class= "col-md-6 col-md-offset-1">
+			<strong><h1><채팅방에 오신 것을 환잉환잉></h1></strong>
+		</div>
+		<div class="row">
+
+			<div class= "col-md-6 col-md-offset-1" id="chatroom">
+
+				<div id ="chat-room" >
+					<table id ='chat-table'>
+					</table>
+				</div>
+
+			</div>
+			<div class= "col-md-5 userroom" id ="members">
+				
+				<input type="text" id="chat_msg" placeholder="할 말">
+				<input type="button" id="send" value="보내기">
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>
